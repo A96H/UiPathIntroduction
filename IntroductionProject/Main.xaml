@@ -168,7 +168,33 @@
         </ui:BrowserScope.Body>
       </ui:BrowserScope>
     </Sequence>
-    <sads:DebugSymbol.Symbol>d1BDOlxVc2Vyc1xBc2FkXERlc2t0b3BcTW9iaWxBcHBsXFVpUGF0aEludHJvZHVjdGlvblxJbnRyb2R1Y3Rpb25Qcm9qZWN0XE1haW4ueGFtbCg+A6wBDgIBAT8FdhYCASV3BZEBEAIBDJIBBaoBEAIBAj+7AT/UAQIBLUULcxYCASZ5OnlXAgENeweQARkCAQ6WAQepARkCAQNGDVQYAgErVQ1jGAIBKWQNchgCASd7nwJ7xQICASSBAQ2NARgCAQ+WAZ8ClgHFAgIBC5wBDaYBGAIBBFKgAVLKAQIBLGGgAWH4AQIBKnCgAXDUAQIBKIMBPoMBQgIBEIUBD4kBIAIBHIoBD4oBtgECAReLAQ+LAawBAgETjAEPjAH+AQIBEZ0BD6QBIAIBB6UBD6UBuwECAQWFAdsEhQHgBAIBI4cBogGHAcwBAgEihQGFAYUBigECASGFAUuFAVECASCFAVyFAXACAR6FAdABhQGXBAIBHYoBmwGKAbMBAgEaigEtigFBAgEYiwGRAYsBqQECARWLAUiLAVkCARSMAaQBjAHsAQIBEp8BogGfAaUCAgEKogFCogFFAgEIpQGkAaUBqQECAQY=</sads:DebugSymbol.Symbol>
+    <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" DisplayName="Open application 'explorer.exe  Utforskar...'" FileName="C:\Windows\explorer.exe" sap2010:WorkflowViewState.IdRef="OpenApplication_3" InformativeScreenshot="b7ec9b4758ffb5e1116c941652fb055c" Selector="&lt;wnd app='explorer.exe' cls='CabinetWClass' idx='1' title='Utforskaren' /&gt;">
+      <ui:OpenApplication.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_19">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'outline item'" sap2010:WorkflowViewState.IdRef="Click_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="f7b1761f42b2497b141e82cee4bddfe2" Selector="&lt;wnd cls='ShellTabWindowClass' title='Utforskaren' /&gt;&lt;wnd aaname='Utforskarfönstret' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Kontrollvärd' cls='NamespaceTreeControl' title='Kontrollen Namnområdesträd' /&gt;&lt;wnd cls='SysTreeView32' title='Trädvy' /&gt;&lt;ctrl name='Den här datorn' role='outline item' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenApplication.Body>
+    </ui:OpenApplication>
+    <sads:DebugSymbol.Symbol>d1BDOlxVc2Vyc1xBc2FkXERlc2t0b3BcTW9iaWxBcHBsXFVpUGF0aEludHJvZHVjdGlvblxJbnRyb2R1Y3Rpb25Qcm9qZWN0XE1haW4ueGFtbC4+A8YBDgIBAT8FdhYCASt3BZEBEAIBEpIBBaoBEAIBCKsBBcQBGgIBAj+7AT/UAQIBM0ULcxYCASx5OnlXAgETeweQARkCARSWAQepARkCAQmrAdECqwGjAwIBB6sBwQGrAdoBAgEGsQELwQEWAgEDRg1UGAIBMVUNYxgCAS9kDXIYAgEte58Ce8UCAgEqgQENjQEYAgEVlgGfApYBxQICARGcAQ2mARgCAQqyAQ3AARgCAQRSoAFSygECATJhoAFh+AECATBwoAFw1AECAS6DAT6DAUICARaFAQ+JASACASKKAQ+KAbYBAgEdiwEPiwGsAQIBGYwBD4wB/gECARedAQ+kASACAQ2lAQ+lAbsBAgELvgGgAb4B4QMCAQWFAdsEhQHgBAIBKYcBogGHAcwBAgEohQGFAYUBigECASeFAUuFAVECASaFAVyFAXACASSFAdABhQGXBAIBI4oBmwGKAbMBAgEgigEtigFBAgEeiwGRAYsBqQECARuLAUiLAVkCARqMAaQBjAHsAQIBGJ8BogGfAaUCAgEQogFCogFFAgEOpQGkAaUBqQECAQw=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -219,14 +245,23 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Sequence_14" sap:VirtualizedContainerService.HintSize="459.2,2227.2">
+      <sap2010:ViewStateData Id="Click_13" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
+      <sap2010:ViewStateData Id="Sequence_19" sap:VirtualizedContainerService.HintSize="336,232">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="499.2,2307.2" />
+      <sap2010:ViewStateData Id="OpenApplication_3" sap:VirtualizedContainerService.HintSize="436.8,379.2" />
+      <sap2010:ViewStateData Id="Sequence_14" sap:VirtualizedContainerService.HintSize="459.2,2646.4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="499.2,2726.4" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>
