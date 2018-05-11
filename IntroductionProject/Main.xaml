@@ -1,1 +1,232 @@
-<Activity x:Class="Main" mva:VisualBasic.Settings="Assembly references and imported namespaces for internal implementation" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mv="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:sd1="clr-namespace:System.Diagnostics;assembly=System" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:si="clr-namespace:System.IO;assembly=mscorlib" xmlns:sl="clr-namespace:System.Linq;assembly=System.Core" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:sx="clr-namespace:System.Xml;assembly=System.Xml" xmlns:sxl="clr-namespace:System.Xml.Linq;assembly=System.Xml.Linq" xmlns:uc="clr-namespace:UiPath.Core;assembly=UiPath.Core" xmlns:uca="clr-namespace:UiPath.Core.Activities;assembly=UiPath.Core.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" />
+﻿<Activity mc:Ignorable="sap sap2010 sads" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap2010:WorkflowViewState.IdRef="Main_1"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities"
+ xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+ xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Core</AssemblyReference>
+      <AssemblyReference>UiPath.Core.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap2010:WorkflowViewState.IdRef="Sequence_14">
+    <ui:OpenBrowser UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Open browser" Hidden="False" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" NewSession="True" Private="False" Url="http://www.virtusa.com/">
+      <ui:OpenBrowser.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_11">
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  hamburger'" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3d8f6e00b02479483e0d4b0e6ee6dd03" Selector="&lt;webctrl id='hamburger' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  http://www.virtusa.c...'" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="e2b98f643f2d029b445f3aacf1450c45" Selector="&lt;webctrl href='http://www.virtusa.com/#mm-3' parentid='menu-item-357' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+            <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'A  http://www.virtusa.c...'" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+              <ui:Click.CursorPosition>
+                <ui:CursorPosition Position="Center">
+                  <ui:CursorPosition.OffsetX>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetX>
+                  <ui:CursorPosition.OffsetY>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:CursorPosition.OffsetY>
+                </ui:CursorPosition>
+              </ui:Click.CursorPosition>
+              <ui:Click.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="2559c6d813b60a396fa744d793d27360" Selector="&lt;webctrl parentid='menu-item-373' tag='A' /&gt;" WaitForReady="INTERACTIVE" />
+              </ui:Click.Target>
+            </ui:Click>
+          </Sequence>
+        </ActivityAction>
+      </ui:OpenBrowser.Body>
+    </ui:OpenBrowser>
+    <Sequence DisplayName="Data scraping" sap2010:WorkflowViewState.IdRef="Sequence_13">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      </Sequence.Variables>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'RPAVirtusa Page'" sap2010:WorkflowViewState.IdRef="BrowserScope_1" InformativeScreenshot="4146fbd03dff2d332382e2f18bf13bc4" Selector="&lt;html title='RPA – Virtusa' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_12">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Default="hh" Name="ExtractDataTableText" />
+              </Sequence.Variables>
+              <ui:ExtractData NextLinkSelector="{x:Null}" ContinueOnError="True" DataTable="[ExtractDataTable]" DelayBetweenPagesMS="300" DisplayName="Extract Structured Data 'DIV  primary'" ExtractMetadata="&lt;extract&gt;&lt;column attr='text' name='RPAAutomateText' exact='0'&gt;&lt;webctrl class='pers-tiles' tag='div' idx='1' /&gt;&lt;webctrl class='row' tag='div' idx='1' /&gt;&lt;webctrl class='col-lg-6' tag='div' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl class='title' tag='h2' idx='1' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap2010:WorkflowViewState.IdRef="ExtractData_1" MaxNumberOfResults="100">
+                <ui:ExtractData.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="b6122ae4fc2c3a8a2773dc191a25f429" Selector="&lt;webctrl id='primary' tag='DIV' /&gt;" WaitForReady="COMPLETE" />
+                </ui:ExtractData.Target>
+              </ui:ExtractData>
+              <ui:OutputDataTable DataTable="[ExtractDataTable]" DisplayName="Output data table" sap2010:WorkflowViewState.IdRef="OutputDataTable_1" Text="[ExtractDataTableText]" />
+              <ui:WriteTextFile DisplayName="Write text file" FileName="TestExtract.txt" sap2010:WorkflowViewState.IdRef="WriteTextFile_2" Text="[ExtractDataTableText]" />
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message box" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="Data has been extracted to file TestExtract.txt in project root folder" TopMost="True" />
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+      </ui:BrowserScope>
+    </Sequence>
+    <Sequence DisplayName="Screen scraping" sap2010:WorkflowViewState.IdRef="Sequence_16">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="ui:GenericValue" Name="H" />
+      </Sequence.Variables>
+      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="IE" DisplayName="Attach Browser 'RPAVirtusa Page'" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="efc47ec53454c50ae7b9789c996c53cd" Selector="&lt;html title='RPA – Virtusa' /&gt;">
+        <ui:BrowserScope.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <ui:GetFullText DisplayName="Get full text 'H2'" sap2010:WorkflowViewState.IdRef="GetFullText_1" IgnoreHidden="False">
+                <ui:GetFullText.Target>
+                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="c7db48867a71021ff7f914a4bed07365" Selector="&lt;webctrl aaname='Automate anywhere with Virtusa&amp;apos;s Robotics Process Automation pra*' parentid='primary' tag='H2' /&gt;" WaitForReady="COMPLETE" />
+                </ui:GetFullText.Target>
+                <ui:GetFullText.Text>
+                  <OutArgument x:TypeArguments="ui:GenericValue">[H]</OutArgument>
+                </ui:GetFullText.Text>
+              </ui:GetFullText>
+              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" Buttons="Ok" DisplayName="Message box" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[H]" TopMost="True" />
+            </Sequence>
+          </ActivityAction>
+        </ui:BrowserScope.Body>
+      </ui:BrowserScope>
+    </Sequence>
+    <sads:DebugSymbol.Symbol>d1BDOlxVc2Vyc1xBc2FkXERlc2t0b3BcTW9iaWxBcHBsXFVpUGF0aEludHJvZHVjdGlvblxJbnRyb2R1Y3Rpb25Qcm9qZWN0XE1haW4ueGFtbCg+A6wBDgIBAT8FdhYCASV3BZEBEAIBDJIBBaoBEAIBAj+7AT/UAQIBLUULcxYCASZ5OnlXAgENeweQARkCAQ6WAQepARkCAQNGDVQYAgErVQ1jGAIBKWQNchgCASd7nwJ7xQICASSBAQ2NARgCAQ+WAZ8ClgHFAgIBC5wBDaYBGAIBBFKgAVLKAQIBLGGgAWH4AQIBKnCgAXDUAQIBKIMBPoMBQgIBEIUBD4kBIAIBHIoBD4oBtgECAReLAQ+LAawBAgETjAEPjAH+AQIBEZ0BD6QBIAIBB6UBD6UBuwECAQWFAdsEhQHgBAIBI4cBogGHAcwBAgEihQGFAYUBigECASGFAUuFAVECASCFAVyFAXACAR6FAdABhQGXBAIBHYoBmwGKAbMBAgEaigEtigFBAgEYiwGRAYsBqQECARWLAUiLAVkCARSMAaQBjAHsAQIBEp8BogGfAaUCAgEKogFCogFFAgEIpQGkAaUBqQECAQY=</sads:DebugSymbol.Symbol>
+  </Sequence>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData Id="Click_8" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
+      <sap2010:ViewStateData Id="Click_9" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
+      <sap2010:ViewStateData Id="Click_10" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
+      <sap2010:ViewStateData Id="Sequence_11" sap:VirtualizedContainerService.HintSize="336,526.4">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="OpenBrowser_2" sap:VirtualizedContainerService.HintSize="436.8,625.6" />
+      <sap2010:ViewStateData Id="ExtractData_1" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
+      <sap2010:ViewStateData Id="OutputDataTable_1" sap:VirtualizedContainerService.HintSize="313.6,22.4" />
+      <sap2010:ViewStateData Id="WriteTextFile_2" sap:VirtualizedContainerService.HintSize="313.6,88" />
+      <sap2010:ViewStateData Id="MessageBox_1" sap:VirtualizedContainerService.HintSize="313.6,59.2" />
+      <sap2010:ViewStateData Id="Sequence_12" sap:VirtualizedContainerService.HintSize="336,521.6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="BrowserScope_1" sap:VirtualizedContainerService.HintSize="414.4,668.8" />
+      <sap2010:ViewStateData Id="Sequence_13" sap:VirtualizedContainerService.HintSize="436.8,793.6">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="GetFullText_1" sap:VirtualizedContainerService.HintSize="313.6,107.2" />
+      <sap2010:ViewStateData Id="MessageBox_2" sap:VirtualizedContainerService.HintSize="313.6,59.2" />
+      <sap2010:ViewStateData Id="Sequence_15" sap:VirtualizedContainerService.HintSize="336,331.2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="BrowserScope_2" sap:VirtualizedContainerService.HintSize="414.4,478.4" />
+      <sap2010:ViewStateData Id="Sequence_16" sap:VirtualizedContainerService.HintSize="436.8,603.2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Sequence_14" sap:VirtualizedContainerService.HintSize="459.2,2227.2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="499.2,2307.2" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+</Activity>
